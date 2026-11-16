@@ -1,5 +1,5 @@
-# Do not open while practising
+# Solutions: closed during a solo attempt
 
-This folder holds, for each test, the reference solution (`solution_*.py`),
-the original broken files (`broken/`, used by `scripts/reset.py`) and the
-bug list (`BUGS.md`). Reading it before finishing a test spoils the test.
+For each test this folder holds the reference solution (`solution_*.py`),
+the planted bugs (`bugs.py`, `BUGS.md`) and the original broken file
+(`broken/`, used by `scripts/reset.py`). Reading it spoils the test.

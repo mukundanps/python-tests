@@ -19,21 +19,33 @@ python3 scripts/reset.py 02        # put the broken file back to redo it
 ```
 
 Start a timer, run the tests first, fix one thing at a time, re-run.
-Do not open `.reference/` until you are done: it holds the solutions.
+`.reference/` holds the solutions; leave it closed during a solo attempt.
+`PATTERNS.md` is the cheat sheet of bug patterns and the debugging routine.
 
 ## Tests
 
-| ID | Topic | Tests | Starts at | Time |
-|----|-------|------:|----------:|-----:|
-| 01 | Expression calculator (tokenizer, shunting-yard, RPN evaluator) | 38 | 18 | 45 min |
-| 02 | Min-heap and Dijkstra shortest paths | 36 | 16 | 60 min |
+| ID | Size | Topic | Tests | Starts at | Time |
+|----|------|-------|------:|----------:|-----:|
+| 01 | full | Expression calculator (tokenizer, shunting-yard, RPN evaluator) | 38 | 18 | 45 min |
+| 02 | full | Min-heap and Dijkstra shortest paths | 36 | 16 | 60 min |
+| 03 | sprint | Byte-pair encoding tokenizer | 23 | 7 | 15 min |
+| 04 | sprint | Next-token sampling (softmax, top-k, top-p) | 30 | 15 | 15 min |
+| 05 | sprint | Scalar autograd and SGD | 24 | 11 | 15 min |
+| 06 | sprint | Edit distance and edit script | 30 | 10 | 15 min |
+| 07 | sprint | LRU cache with TTL | 24 | 12 | 15 min |
+| 08 | sprint | Interval merge, intersect, gaps | 30 | 19 | 15 min |
+| 09 | rehearsal | Bigram language model and beam search | 50 | 15 | 75 min |
 
-## Adding tests with Claude Code
+## Working with Claude Code
 
 Open the repo in Claude Code and use:
 
-- `/new-test [topic]` — generate, verify and register a new practice test
-- `/hint <id> [test name]` — a graded hint, without the answer
-- `/review <id>` — score the attempt and walk through what is still failing
+- `/walkthrough <id>` — bug by bug: you get a moment to spot each one, then
+  Claude explains it, applies the fix and re-runs (the quick way to learn)
+- `/solve <id>` — Claude fixes everything and explains each bug
+- `/hint <id> [test name]` — a graded hint during a solo attempt
+- `/review <id>` — score a solo attempt and point at what is still failing
+- `/new-test [sprint|full|rehearsal] [topic]` — generate, verify and
+  register a new practice test
 
 `CLAUDE.md` holds the rules these follow.

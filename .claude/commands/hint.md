@@ -1,8 +1,8 @@
 ---
-description: Graded hint for a practice test, without the answer
+description: Graded hint for a solo attempt, without the answer
 argument-hint: <id> [failing test name]
 ---
-He wants a hint for: $ARGUMENTS
+He is attempting this test solo and wants a hint for: $ARGUMENTS
 
 Run `python3 scripts/run.py <id> -v` to see the current failures. Give one
 hint at the lowest level not yet given in this conversation for that test
